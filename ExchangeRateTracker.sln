@@ -5,9 +5,7 @@ VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExchangeRateTracker.Api", "ExchangeRateTracker.Api\ExchangeRateTracker.Api.csproj", "{D9651554-3B91-41F6-9F07-89DA8977B5E0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExchangeRateTracker.AutoSynhronize", "ExchangeRateTracker.AutoSynhronize\ExchangeRateTracker.AutoSynhronize.csproj", "{46DD0DBE-E854-4EF2-AB50-5A7245875E42}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExchangeRateTracker.Tests", "ExchangeRateTracker.Tests\ExchangeRateTracker.Tests.csproj", "{1B999821-78BD-4E88-A61C-C5E57AA39369}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExchangeRateTracker.Tests", "ExchangeRateTracker.Tests\ExchangeRateTracker.Tests.csproj", "{1B999821-78BD-4E88-A61C-C5E57AA39369}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,10 +17,6 @@ Global
 		{D9651554-3B91-41F6-9F07-89DA8977B5E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9651554-3B91-41F6-9F07-89DA8977B5E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D9651554-3B91-41F6-9F07-89DA8977B5E0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{46DD0DBE-E854-4EF2-AB50-5A7245875E42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{46DD0DBE-E854-4EF2-AB50-5A7245875E42}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{46DD0DBE-E854-4EF2-AB50-5A7245875E42}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{46DD0DBE-E854-4EF2-AB50-5A7245875E42}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1B999821-78BD-4E88-A61C-C5E57AA39369}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1B999821-78BD-4E88-A61C-C5E57AA39369}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1B999821-78BD-4E88-A61C-C5E57AA39369}.Release|Any CPU.ActiveCfg = Release|Any CPU
