@@ -14,9 +14,7 @@
 
 ## Стек:
 - .Net Core 6
-- .Net Framework 4.7.2
 - Web Api
-- Windows Service
 - MsSql
 - Ef Core
 
@@ -35,9 +33,4 @@
 }
 - Выполнить миграцию, например, в "Консоли диспетчера пакетов" в VS:
 Update-database
-
-### Windows service
-- Запустить PowerShell от имени администратора и выполнить команду:
-New-Service -Name "AutoSynhronizeExchRate" -BinaryPathName <Полный путь к файлу с проектом>\ExchangeRateTracker\ExchangeRateTracker.AutoSynhronize\bin\Debug\ExchangeRateTracker.AutoSynhronize.exe
-- Зайти в приложение "Службы", найти службу AutoSynhronizeExchRate и запустить.
 
