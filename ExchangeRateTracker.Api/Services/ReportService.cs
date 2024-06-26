@@ -15,6 +15,8 @@ namespace ExchangeRateTracker.Api.Services
 
         public ReportDto BuildByCurrencies(List<string> currencies, DateOnly dateFrom, DateOnly dateTo)
         {
+            var result = new ReportDto();
+
             var startDate = dateFrom.ToDateTime(new TimeOnly());
             var endDate = dateTo.ToDateTime(new TimeOnly());
 
@@ -27,11 +29,17 @@ namespace ExchangeRateTracker.Api.Services
 
             if(!reportData.Any())
             {
-                var lastRateDate = _context.ExchangeRates
+                var beforeStartDateRates = _context.ExchangeRates
                     .Where(rate
                         => currencies.Contains(rate.CurrencyCode)
                         && rate.Date < startDate)
-                    .Max(rate => rate.Date);
+                    .ToList();
+
+                //Если нет курсов раньше startDate, то нет данных для формирования отчета
+                if (!beforeStartDateRates.Any()) 
+                    return result;
+
+                var lastRateDate = beforeStartDateRates.Max(rate => rate.Date);
 
                 reportData = _context.ExchangeRates
                     .Where(rate
@@ -39,8 +47,6 @@ namespace ExchangeRateTracker.Api.Services
                         && rate.Date == lastRateDate)
                     .ToList();
             }
-
-            var result = new ReportDto();
 
             foreach(var groupByCurrency in reportData.GroupBy(rate => rate.CurrencyCode))
                 result.Currencies.Add(new ReportCurrency
